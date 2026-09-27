@@ -5,3 +5,7 @@ builder = "nixpacks"
 startCommand = "gunicorn tracker:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
+
+[[mounts]]
+source = "data"
+target = "/data"
